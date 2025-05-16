@@ -18,8 +18,7 @@ gem "importmap-rails"
 # Turbo for Rails 8
 gem "turbo-rails"
 
-# Add SCSS support
-gem "sass-rails", "~> 6.0"
+
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -73,3 +72,4 @@ group :production do
   # Use PostgreSQL as the database for Active Record in production
   gem "pg", "~> 1.5"
 end
+gem "cssbundling-rails", "~> 1.4"

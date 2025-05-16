@@ -1,57 +1,58 @@
 <div class="landing-page">
   <header class="hero">
     <div class="container">
-      <div class="hero-content">
-        <h1>Automate Your Social Media with Trending Content</h1>
-        <h2>Save hours daily with AI-powered content creation from the latest web trends</h2>
+      <div class="hero-content hero-content-left">
+        <h1 class="hero-headline">Build Thought Leadership in 1 minute</h1>
+        <h2>Transform industry news into your unique insights - automatically.</h2>
         
         <div class="cta-primary">
-          <a href="#pricing" class="btn btn-primary btn-lg">Start Your Free Trial</a>
+          <a href="#pricing" class="btn btn-primary btn-lg">Become a Thought Leader Today</a>
           <p class="no-credit-card">No credit card required</p>
         </div>
-        
-        <div class="hero-image">
-          <%= image_tag "hero-dashboard.png", alt: "Social media content dashboard", class: "img-fluid" %>
-        </div>
+        <% if false %>
+          <div class="hero-image">
+            <%= image_tag "hero-dashboard.png", alt: "Thought leadership content dashboard", class: "img-fluid" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </header>
 
   <section class="benefits">
     <div class="container">
-      <h2>Create Engaging Content in Minutes, Not Hours</h2>
+      <h2>Establish Your Professional Authority in Minutes, Not Hours</h2>
       
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-trending.svg", alt: "Trending icon" %>
+            <%= image_tag "icon-trending.svg", alt: "Authority icon" %>
           </div>
-          <h3>Always Trending</h3>
-          <p>Our AI finds the hottest topics in your niche, ensuring your content is always relevant and timely.</p>
+          <h3>Establish Authority</h3>
+          <p>Position yourself as an industry expert with insightful commentary on trending topics and breaking news.</p>
         </div>
         
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-customize.svg", alt: "Customize icon" %>
+            <%= image_tag "icon-customize.svg", alt: "Voice icon" %>
           </div>
-          <h3>Fully Customizable</h3>
-          <p>Set your preferences once and get content that matches your brand voice and audience interests.</p>
+          <h3>Authentic Voice</h3>
+          <p>Maintain your unique perspective and tone across all content while saving hours of writing time.</p>
         </div>
         
         <div class="benefit-card">
           <div class="benefit-icon">
             <%= image_tag "icon-ready.svg", alt: "Ready icon" %>
           </div>
-          <h3>Ready to Post</h3>
-          <p>Get perfectly formatted content for each platform - no editing required before posting.</p>
+          <h3>Ready to Share</h3>
+          <p>Get platform-optimized thought leadership content that positions you ahead of industry trends.</p>
         </div>
         
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-schedule.svg", alt: "Schedule icon" %>
+            <%= image_tag "icon-schedule.svg", alt: "Opportunities icon" %>
           </div>
-          <h3>Consistent Schedule</h3>
-          <p>Never miss a post with automated content delivery on your preferred schedule.</p>
+          <h3>Unlock Opportunities</h3>
+          <p>Attract speaking engagements, media mentions, and career advancement through consistent thought leadership.</p>
         </div>
       </div>
     </div>
@@ -64,20 +65,20 @@
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Set Your Preferences</h3>
-          <p>Choose your topics, content style, and posting schedule.</p>
+          <h3>Define Your Expertise</h3>
+          <p>Select your industry, areas of expertise, and unique perspectives.</p>
         </div>
         
         <div class="step">
           <div class="step-number">2</div>
-          <h3>We Scan the Web</h3>
-          <p>Our tool finds trending content matching your preferences.</p>
+          <h3>AI Monitors the Landscape</h3>
+          <p>We continuously scan for relevant breaking news and industry developments.</p>
         </div>
         
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Get Ready-to-Post Content</h3>
-          <p>Receive platform-optimized content directly in your dashboard.</p>
+          <h3>Review and Share</h3>
+          <p>Receive ready-to-post thought leadership content with your authentic take on trending topics.</p>
         </div>
       </div>
       
@@ -89,26 +90,26 @@
   
   <section id="demo" class="demo">
     <div class="container">
-      <h2>See It In Action</h2>
+      <h2>See Thought Leadership in Action</h2>
       
       <div class="demo-wrapper">
         <div id="demo-carousel" class="demo-carousel">
           <!-- This will be controlled by JavaScript -->
           <div class="demo-slide active">
-            <%= image_tag "demo-1.png", alt: "Dashboard demo", class: "img-fluid" %>
+            <%= image_tag "demo-1.png", alt: "Thought leadership dashboard", class: "img-fluid" %>
           </div>
           <div class="demo-slide">
-            <%= image_tag "demo-2.png", alt: "Content creation demo", class: "img-fluid" %>
+            <%= image_tag "demo-2.png", alt: "Content creation with personal insights", class: "img-fluid" %>
           </div>
           <div class="demo-slide">
-            <%= image_tag "demo-3.png", alt: "Analytics demo", class: "img-fluid" %>
+            <%= image_tag "demo-3.png", alt: "Influence analytics", class: "img-fluid" %>
           </div>
         </div>
         
         <div class="demo-controls">
-          <button class="demo-control" data-slide="0">Dashboard</button>
-          <button class="demo-control" data-slide="1">Content Creation</button>
-          <button class="demo-control" data-slide="2">Analytics</button>
+          <button class="demo-control" data-slide="0">Insight Dashboard</button>
+          <button class="demo-control" data-slide="1">Thought Creation</button>
+          <button class="demo-control" data-slide="2">Influence Analytics</button>
         </div>
       </div>
     </div>
@@ -116,12 +117,12 @@
   
   <section id="testimonials" class="testimonials">
     <div class="container">
-      <h2>What Our Customers Say</h2>
+      <h2>From Industry Professionals to Thought Leaders</h2>
       
       <div class="testimonials-grid">
         <div class="testimonial">
           <div class="testimonial-content">
-            <p>"This tool has saved me at least 10 hours every week. My engagement is up 45% since I started using it."</p>
+            <p>"I was invited to speak at three industry conferences after just two months of consistent thought leadership. This tool made it possible while working full-time."</p>
           </div>
           <div class="testimonial-author">
             <div class="testimonial-avatar">
@@ -129,14 +130,14 @@
             </div>
             <div class="testimonial-info">
               <h4>Sarah J.</h4>
-              <p>Social Media Manager</p>
+              <p>Director of Innovation</p>
             </div>
           </div>
         </div>
         
         <div class="testimonial">
           <div class="testimonial-content">
-            <p>"The content is so on-point that my followers think I have a team of writers. Best investment for my small business."</p>
+            <p>"My LinkedIn profile views increased 320% after I started sharing thought leadership content. I've received multiple job offers and consulting opportunities."</p>
           </div>
           <div class="testimonial-author">
             <div class="testimonial-avatar">
@@ -144,14 +145,14 @@
             </div>
             <div class="testimonial-info">
               <h4>Michael T.</h4>
-              <p>E-commerce Entrepreneur</p>
+              <p>Senior Marketing Executive</p>
             </div>
           </div>
         </div>
         
         <div class="testimonial">
           <div class="testimonial-content">
-            <p>"We've seen 3x higher engagement on posts created with this tool compared to our previous content strategy."</p>
+            <p>"As a startup founder, being seen as an industry authority was crucial for fundraising. This tool helped me establish credibility with investors in record time."</p>
           </div>
           <div class="testimonial-author">
             <div class="testimonial-avatar">
@@ -159,7 +160,7 @@
             </div>
             <div class="testimonial-info">
               <h4>Elena R.</h4>
-              <p>Digital Marketing Director</p>
+              <p>Tech Entrepreneur</p>
             </div>
           </div>
         </div>
@@ -169,10 +170,47 @@
   
   <section id="pricing" class="pricing">
     <div class="container">
-      <h2>Choose Your Plan</h2>
+      <h2>Elevate Your Professional Brand</h2>
       <p class="pricing-subtitle">All plans include a 14-day free trial</p>
       
       <div class="pricing-grid">
+        <% @plans = [
+          { 
+            name: "Emerging Voice", 
+            price: 29, 
+            features: [
+              "Daily industry monitoring",
+              "3 thought leadership posts weekly",
+              "Basic personal branding",
+              "LinkedIn & Twitter optimization",
+              "Email support"
+            ]
+          },
+          {
+            name: "Industry Authority", 
+            price: 79, 
+            features: [
+              "Real-time industry monitoring",
+              "Daily thought leadership content",
+              "Advanced personal branding",
+              "Multi-platform optimization",
+              "Content performance analytics",
+              "Priority support"
+            ]
+          },
+          {
+            name: "Thought Leadership Team", 
+            price: 199, 
+            features: [
+              "Team collaboration features",
+              "Unlimited daily content",
+              "Executive branding strategy",
+              "Custom publishing calendar",
+              "Advanced analytics dashboard",
+              "Dedicated success manager"
+            ]
+          }
+        ] %>
         <% @plans.each_with_index do |plan, index| %>
           <div class="pricing-card <%= 'featured' if index == 1 %>">
             <div class="pricing-header">
@@ -194,7 +232,7 @@
             
             <div class="pricing-footer">
               <a href="#" class="btn <%= index == 1 ? 'btn-primary' : 'btn-outline' %>">
-                Get Started
+                Start Your Journey
               </a>
             </div>
           </div>
@@ -214,51 +252,51 @@
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">
-            <h3>How much time will this save me?</h3>
+            <h3>How does this differ from generic content creation tools?</h3>
             <span class="faq-icon">+</span>
           </div>
           <div id="faq1" class="faq-answer collapse">
-            <p>Most users report saving 5-10 hours per week on content research and creation. The exact time savings depend on your current workflow and how many platforms you manage.</p>
+            <p>Unlike general content tools, we focus specifically on thought leadership and professional authority building. Our platform analyzes industry news through the lens of your expertise to create content that positions you as an insightful leader with unique perspectives.</p>
           </div>
         </div>
         
         <div class="faq-item">
           <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">
-            <h3>Can I customize the content style and tone?</h3>
+            <h3>Can I maintain my authentic voice and perspective?</h3>
             <span class="faq-icon">+</span>
           </div>
           <div id="faq2" class="faq-answer collapse">
-            <p>Absolutely! You can set your brand voice, preferred writing style, and content preferences. Our AI will adapt to match your brand's unique personality.</p>
+            <p>Absolutely! During onboarding, we analyze your existing content and perspectives to ensure all generated thought leadership maintains your authentic voice. You'll always have final review before publishing to ensure the content aligns with your views.</p>
           </div>
         </div>
         
         <div class="faq-item">
           <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">
-            <h3>Which social platforms are supported?</h3>
+            <h3>How will this help me get recognized as a thought leader?</h3>
             <span class="faq-icon">+</span>
           </div>
           <div id="faq3" class="faq-answer collapse">
-            <p>We support all major platforms including Instagram, Facebook, Twitter, LinkedIn, TikTok, and Pinterest. Each piece of content is formatted specifically for the platform it's intended for.</p>
+            <p>Consistent, insightful commentary on industry trends is the foundation of thought leadership. Our platform helps you maintain this consistency while ensuring your content is timely and relevant. Users typically see increased profile views, connection requests, and professional opportunities within 4-8 weeks of consistent publishing.</p>
           </div>
         </div>
         
         <div class="faq-item">
           <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">
-            <h3>Do I need technical knowledge to use this?</h3>
+            <h3>How much time will this actually save me?</h3>
             <span class="faq-icon">+</span>
           </div>
           <div id="faq4" class="faq-answer collapse">
-            <p>Not at all! Our platform is designed to be intuitive and user-friendly. You'll be up and running in minutes, even if you have no technical experience.</p>
+            <p>Most professionals spend 3-5 hours weekly researching industry news and crafting thoughtful posts. Our users report saving over 90% of this time, spending just 10-15 minutes daily reviewing and approving AI-generated thought leadership content.</p>
           </div>
         </div>
         
         <div class="faq-item">
           <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">
-            <h3>Can I cancel my subscription?</h3>
+            <h3>Can I customize the content for different platforms?</h3>
             <span class="faq-icon">+</span>
           </div>
           <div id="faq5" class="faq-answer collapse">
-            <p>Yes, you can cancel anytime with no questions asked. We also offer a 30-day money-back guarantee if you're not satisfied with the service.</p>
+            <p>Yes, each thought leadership piece is automatically formatted for LinkedIn, Twitter, industry forums, or your company blog. The core insight remains consistent while the presentation is optimized for each platform's unique audience and format requirements.</p>
           </div>
         </div>
       </div>
@@ -268,13 +306,13 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-box">
-        <h2>Ready to Transform Your Social Media Strategy?</h2>
-        <p>Join thousands of marketers and business owners saving time while improving their social media performance.</p>
+        <h2>Join the Ranks of Recognized Industry Experts</h2>
+        <p>Transform from participant to authority in your field - in just minutes a day.</p>
         
         <%= form_with url: subscribe_path, method: :post, class: 'cta-form', data: { turbo: true } do |form| %>
           <div class="input-group">
             <%= form.email_field :email, placeholder: 'Enter your email', class: 'form-control', required: true %>
-            <%= form.submit 'Start Free Trial', class: 'btn btn-primary' %>
+            <%= form.submit 'Start Your Thought Leadership Journey', class: 'btn btn-primary' %>
           </div>
         <% end %>
         

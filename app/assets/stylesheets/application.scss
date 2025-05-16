@@ -1,10 +1,10 @@
 // app/assets/stylesheets/application.scss
 
 // Variables
-$primary-color: #4f46e5;
-$primary-dark: #4338ca;
-$primary-light: #818cf8;
-$secondary-color: #14b8a6;
+$primary-color: #2c3e50; // Updated to a deeper, more authoritative blue
+$primary-dark: #1a252f;
+$primary-light: #3498db;
+$secondary-color: #16a085; // A sophisticated teal
 $dark-color: #1e293b;
 $light-color: #f8fafc;
 
@@ -136,6 +136,30 @@ section {
   }
 }
 
+/* Executive-style CTA (new) */
+.executive-cta {
+  background: linear-gradient(to right, $primary-dark, $primary-color);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  
+  &:hover::after {
+    transform: translateX(100%);
+  }
+}
+
 /* Form Elements */
 .form-control {
   display: block;
@@ -251,7 +275,7 @@ section {
 /* Hero Section */
 .hero {
   padding: 6rem 0;
-  background: linear-gradient(to bottom, #f0f9ff, #e0f2fe);
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
   overflow: hidden;
   
   &-content {
@@ -259,27 +283,50 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+    &-left {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  
+  &-headline {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    max-width: 800px;
+    background: linear-gradient(to right, $primary-color, $primary-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
   }
   
   h1 {
     max-width: 800px;
     margin-bottom: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, $primary-color, $primary-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   h2 {
     font-weight: 400;
-    color: $gray-600;
-    max-width: 700px;
+    color: $gray-700;
+    max-width: 550px;
     margin-bottom: 2.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    text-align: left;
   }
   
   &-image {
-    width: 80%;
+    width: 100%;
     max-width: 1000px;
     box-shadow: $shadow-lg;
     border-radius: $border-radius;
     overflow: hidden;
+    margin-top: 3rem;
   }
 }
 
@@ -291,6 +338,18 @@ section {
   margin-top: 1rem;
   font-size: 0.875rem;
   color: $gray-500;
+}
+
+/* Thought leadership badge (new) */
+.thought-badge {
+  display: inline-block;
+  background-color: rgba($primary-color, 0.1);
+  color: $primary-color;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
 }
 
 /* Benefits Section */
@@ -307,14 +366,16 @@ section {
 
 .benefit-card {
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-radius: $border-radius;
-  background-color: $gray-100;
+  background-color: white;
+  box-shadow: $shadow-sm;
+  border: 1px solid $gray-200;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: $shadow-md;
+    box-shadow: $shadow-lg;
   }
   
   &-icon {
@@ -324,13 +385,15 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e0f2fe;
+    background-color: rgba($primary-color, 0.1);
     border-radius: 50%;
+    color: $primary-color;
   }
   
   h3 {
     margin-bottom: 1rem;
-    color: $primary-color;
+    color: $gray-800;
+    font-weight: 600;
   }
 }
 
@@ -443,12 +506,29 @@ section {
 .testimonial {
   background-color: white;
   border-radius: $border-radius;
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: $shadow-md;
+  border: 1px solid $gray-200;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
   
   &-content {
     margin-bottom: 1.5rem;
     font-style: italic;
+    position: relative;
+    
+    &::before {
+      content: '"';
+      font-size: 4rem;
+      color: rgba($primary-color, 0.1);
+      position: absolute;
+      top: -2rem;
+      left: -1rem;
+      font-family: 'Georgia', serif;
+    }
   }
   
   &-author {
@@ -457,21 +537,24 @@ section {
   }
   
   &-avatar {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 1rem;
+    border: 3px solid $gray-200;
   }
   
   &-info {
     h4 {
       margin-bottom: 0.25rem;
+      font-weight: 600;
     }
     
     p {
       font-size: 0.875rem;
-      color: $gray-500;
+      color: $primary-color;
+      font-weight: 500;
       margin-bottom: 0;
     }
   }
@@ -495,10 +578,11 @@ section {
   }
   
   &-card {
-    background-color: $gray-100;
+    background-color: white;
     border-radius: $border-radius;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid $gray-200;
     
     &:hover {
       transform: translateY(-5px);
@@ -783,6 +867,10 @@ section {
     font-size: 2.5rem;
   }
   
+  .hero-headline {
+    font-size: 3.5rem;
+  }
+  
   h2 {
     font-size: 2rem;
   }
@@ -811,12 +899,12 @@ section {
   }
   
   .hero {
-    h1 {
-      font-size: 2rem;
+    h1, .hero-headline {
+      font-size: 3rem;
     }
     
     h2 {
-      font-size: 1.125rem;
+      font-size: 1.25rem;
     }
   }
   
@@ -836,6 +924,10 @@ section {
 @media (max-width: 576px) {
   section {
     padding: 3rem 0;
+  }
+  
+  .hero-headline {
+    font-size: 2.5rem;
   }
   
   .benefits-grid, .testimonials-grid {
