@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendPost - Automated Social Media Content from Trending Topics</title>
+  <meta name="description" content="Save hours by automating your social media content creation with trending topics customized for your audience.">
+  
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Rails built-in CSS bundling -->
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  
+  <!-- Rails 8 JS modules with ESM support -->
+  <%= javascript_importmap_tags %>
+  <%= turbo_include_tags %>
+    <%= javascript_importmap_tags %>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <%= image_tag "logo.svg", alt: "TrendPost Logo", height: 40 %>
+      </a>
+      
+      <div class="navbar-links">
+        <a href="#benefits">Benefits</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+      </div>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <% if flash[:success] %>
+    <div class="flash flash-success">
+      <%= flash[:success] %>
+    </div>
+  <% end %>
+  
+  <% if flash[:error] %>
+    <div class="flash flash-error">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
+
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <%= image_tag "logo-white.svg", alt: "TrendPost Logo", height: 40 %>
+          <p>Automating social media content creation with trending topics customized for your audience.</p>
+          
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#benefits">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#demo">Demo</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <%= Date.today.year %> TrendPost. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

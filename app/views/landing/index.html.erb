@@ -1,0 +1,285 @@
+<div class="landing-page">
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Automate Your Social Media with Trending Content</h1>
+        <h2>Save hours daily with AI-powered content creation from the latest web trends</h2>
+        
+        <div class="cta-primary">
+          <a href="#pricing" class="btn btn-primary btn-lg">Start Your Free Trial</a>
+          <p class="no-credit-card">No credit card required</p>
+        </div>
+        
+        <div class="hero-image">
+          <%= image_tag "hero-dashboard.png", alt: "Social media content dashboard", class: "img-fluid" %>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="benefits">
+    <div class="container">
+      <h2>Create Engaging Content in Minutes, Not Hours</h2>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <%= image_tag "icon-trending.svg", alt: "Trending icon" %>
+          </div>
+          <h3>Always Trending</h3>
+          <p>Our AI finds the hottest topics in your niche, ensuring your content is always relevant and timely.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <%= image_tag "icon-customize.svg", alt: "Customize icon" %>
+          </div>
+          <h3>Fully Customizable</h3>
+          <p>Set your preferences once and get content that matches your brand voice and audience interests.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <%= image_tag "icon-ready.svg", alt: "Ready icon" %>
+          </div>
+          <h3>Ready to Post</h3>
+          <p>Get perfectly formatted content for each platform - no editing required before posting.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <%= image_tag "icon-schedule.svg", alt: "Schedule icon" %>
+          </div>
+          <h3>Consistent Schedule</h3>
+          <p>Never miss a post with automated content delivery on your preferred schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Set Your Preferences</h3>
+          <p>Choose your topics, content style, and posting schedule.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>We Scan the Web</h3>
+          <p>Our tool finds trending content matching your preferences.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Get Ready-to-Post Content</h3>
+          <p>Receive platform-optimized content directly in your dashboard.</p>
+        </div>
+      </div>
+      
+      <div class="cta-secondary">
+        <a href="#pricing" class="btn btn-secondary">See Our Plans</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="demo" class="demo">
+    <div class="container">
+      <h2>See It In Action</h2>
+      
+      <div class="demo-wrapper">
+        <div id="demo-carousel" class="demo-carousel">
+          <!-- This will be controlled by JavaScript -->
+          <div class="demo-slide active">
+            <%= image_tag "demo-1.png", alt: "Dashboard demo", class: "img-fluid" %>
+          </div>
+          <div class="demo-slide">
+            <%= image_tag "demo-2.png", alt: "Content creation demo", class: "img-fluid" %>
+          </div>
+          <div class="demo-slide">
+            <%= image_tag "demo-3.png", alt: "Analytics demo", class: "img-fluid" %>
+          </div>
+        </div>
+        
+        <div class="demo-controls">
+          <button class="demo-control" data-slide="0">Dashboard</button>
+          <button class="demo-control" data-slide="1">Content Creation</button>
+          <button class="demo-control" data-slide="2">Analytics</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"This tool has saved me at least 10 hours every week. My engagement is up 45% since I started using it."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <%= image_tag "avatar-1.jpg", alt: "Sarah J." %>
+            </div>
+            <div class="testimonial-info">
+              <h4>Sarah J.</h4>
+              <p>Social Media Manager</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"The content is so on-point that my followers think I have a team of writers. Best investment for my small business."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <%= image_tag "avatar-2.jpg", alt: "Michael T." %>
+            </div>
+            <div class="testimonial-info">
+              <h4>Michael T.</h4>
+              <p>E-commerce Entrepreneur</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"We've seen 3x higher engagement on posts created with this tool compared to our previous content strategy."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <%= image_tag "avatar-3.jpg", alt: "Elena R." %>
+            </div>
+            <div class="testimonial-info">
+              <h4>Elena R.</h4>
+              <p>Digital Marketing Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Choose Your Plan</h2>
+      <p class="pricing-subtitle">All plans include a 14-day free trial</p>
+      
+      <div class="pricing-grid">
+        <% @plans.each_with_index do |plan, index| %>
+          <div class="pricing-card <%= 'featured' if index == 1 %>">
+            <div class="pricing-header">
+              <h3><%= plan[:name] %></h3>
+              <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount"><%= plan[:price] %></span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            
+            <div class="pricing-features">
+              <ul>
+                <% plan[:features].each do |feature| %>
+                  <li><%= feature %></li>
+                <% end %>
+              </ul>
+            </div>
+            
+            <div class="pricing-footer">
+              <a href="#" class="btn <%= index == 1 ? 'btn-primary' : 'btn-outline' %>">
+                Get Started
+              </a>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      
+      <div class="pricing-guarantee">
+        <p>30-day money-back guarantee. Cancel anytime.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">
+            <h3>How much time will this save me?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div id="faq1" class="faq-answer collapse">
+            <p>Most users report saving 5-10 hours per week on content research and creation. The exact time savings depend on your current workflow and how many platforms you manage.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">
+            <h3>Can I customize the content style and tone?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div id="faq2" class="faq-answer collapse">
+            <p>Absolutely! You can set your brand voice, preferred writing style, and content preferences. Our AI will adapt to match your brand's unique personality.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">
+            <h3>Which social platforms are supported?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div id="faq3" class="faq-answer collapse">
+            <p>We support all major platforms including Instagram, Facebook, Twitter, LinkedIn, TikTok, and Pinterest. Each piece of content is formatted specifically for the platform it's intended for.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">
+            <h3>Do I need technical knowledge to use this?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div id="faq4" class="faq-answer collapse">
+            <p>Not at all! Our platform is designed to be intuitive and user-friendly. You'll be up and running in minutes, even if you have no technical experience.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">
+            <h3>Can I cancel my subscription?</h3>
+            <span class="faq-icon">+</span>
+          </div>
+          <div id="faq5" class="faq-answer collapse">
+            <p>Yes, you can cancel anytime with no questions asked. We also offer a 30-day money-back guarantee if you're not satisfied with the service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Transform Your Social Media Strategy?</h2>
+        <p>Join thousands of marketers and business owners saving time while improving their social media performance.</p>
+        
+        <%= form_with url: subscribe_path, method: :post, class: 'cta-form', data: { turbo: true } do |form| %>
+          <div class="input-group">
+            <%= form.email_field :email, placeholder: 'Enter your email', class: 'form-control', required: true %>
+            <%= form.submit 'Start Free Trial', class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+        
+        <p class="cta-guarantee">No credit card required for trial. 30-day money-back guarantee.</p>
+      </div>
+    </div>
+  </section>
+</div>
