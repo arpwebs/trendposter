@@ -2,177 +2,93 @@
   <header class="hero">
     <div class="container">
       <div class="hero-content hero-content-left">
-        <h1 class="hero-headline">Build Thought Leadership in 1 minute</h1>
-        <h2>Transform industry news into your unique insights - automatically.</h2>
-        
+        <h1 class="hero-headline">Build Thought Leadership<br>5 Minutes per Day</h1>
+        <h2>Transform industry news into your unique insights – automatically.</h2>
+
         <div class="cta-primary">
-          <a href="#pricing" class="btn btn-primary btn-lg">Become a Thought Leader Today</a>
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+          <%= link_to "Log In", new_user_session_path, class: "btn btn-outline btn-lg", style: "margin-left: 1rem;" %>
           <p class="no-credit-card">No credit card required</p>
         </div>
-        <% if false %>
-          <div class="hero-image">
-            <%= image_tag "hero-dashboard.png", alt: "Thought leadership content dashboard", class: "img-fluid" %>
-          </div>
-        <% end %>
       </div>
     </div>
   </header>
 
-  <section class="benefits">
+  <section class="benefits" id="benefits">
     <div class="container">
-      <h2>Establish Your Professional Authority in Minutes, Not Hours</h2>
-      
+      <h2>Build Your Following in Minutes a Day</h2>
+
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-trending.svg", alt: "Authority icon" %>
+            <%= image_tag "icon-trending.svg", alt: "Trending icon" %>
           </div>
-          <h3>Establish Authority</h3>
-          <p>Position yourself as an industry expert with insightful commentary on trending topics and breaking news.</p>
+          <h3>Stay Ahead of the Curve</h3>
+          <p>Always be up to date on the latest industry news and trends—without spending hours researching.</p>
         </div>
-        
+
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-customize.svg", alt: "Voice icon" %>
+            <%= image_tag "icon-customize.svg", alt: "Consistency icon" %>
           </div>
-          <h3>Authentic Voice</h3>
-          <p>Maintain your unique perspective and tone across all content while saving hours of writing time.</p>
+          <h3>Consistently You</h3>
+          <p>Keep your content aligned with your expertise and interests—no writing required.</p>
         </div>
-        
+
         <div class="benefit-card">
           <div class="benefit-icon">
             <%= image_tag "icon-ready.svg", alt: "Ready icon" %>
           </div>
           <h3>Ready to Share</h3>
-          <p>Get platform-optimized thought leadership content that positions you ahead of industry trends.</p>
+          <p>Get platform-optimized posts that are ready to publish and designed to grow your audience.</p>
         </div>
-        
+
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-schedule.svg", alt: "Opportunities icon" %>
+            <%= image_tag "icon-schedule.svg", alt: "Visibility icon" %>
           </div>
-          <h3>Unlock Opportunities</h3>
-          <p>Attract speaking engagements, media mentions, and career advancement through consistent thought leadership.</p>
+          <h3>Show Up More Often</h3>
+          <p>Consistent, frequent posting boosts your visibility and builds trust with your growing audience.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="how-it-works">
+  <section class="how-it-works" id="how-it-works">
     <div class="container">
       <h2>How It Works</h2>
-      
+
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
           <h3>Define Your Expertise</h3>
-          <p>Select your industry, areas of expertise, and unique perspectives.</p>
+          <p>Select your industry, areas of interest, and the topics that matter to you.</p>
         </div>
-        
+
         <div class="step">
           <div class="step-number">2</div>
           <h3>AI Monitors the Landscape</h3>
           <p>We continuously scan for relevant breaking news and industry developments.</p>
         </div>
-        
+
         <div class="step">
           <div class="step-number">3</div>
           <h3>Review and Share</h3>
-          <p>Receive ready-to-post thought leadership content with your authentic take on trending topics.</p>
+          <p>Receive ready-to-post content designed to help you grow your presence and influence.</p>
         </div>
       </div>
-      
+
       <div class="cta-secondary">
         <a href="#pricing" class="btn btn-secondary">See Our Plans</a>
       </div>
     </div>
   </section>
-  
-  <section id="demo" class="demo">
-    <div class="container">
-      <h2>See Thought Leadership in Action</h2>
-      
-      <div class="demo-wrapper">
-        <div id="demo-carousel" class="demo-carousel">
-          <!-- This will be controlled by JavaScript -->
-          <div class="demo-slide active">
-            <%= image_tag "demo-1.png", alt: "Thought leadership dashboard", class: "img-fluid" %>
-          </div>
-          <div class="demo-slide">
-            <%= image_tag "demo-2.png", alt: "Content creation with personal insights", class: "img-fluid" %>
-          </div>
-          <div class="demo-slide">
-            <%= image_tag "demo-3.png", alt: "Influence analytics", class: "img-fluid" %>
-          </div>
-        </div>
-        
-        <div class="demo-controls">
-          <button class="demo-control" data-slide="0">Insight Dashboard</button>
-          <button class="demo-control" data-slide="1">Thought Creation</button>
-          <button class="demo-control" data-slide="2">Influence Analytics</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <h2>From Industry Professionals to Thought Leaders</h2>
-      
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="testimonial-content">
-            <p>"I was invited to speak at three industry conferences after just two months of consistent thought leadership. This tool made it possible while working full-time."</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <%= image_tag "avatar-1.jpg", alt: "Sarah J." %>
-            </div>
-            <div class="testimonial-info">
-              <h4>Sarah J.</h4>
-              <p>Director of Innovation</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="testimonial">
-          <div class="testimonial-content">
-            <p>"My LinkedIn profile views increased 320% after I started sharing thought leadership content. I've received multiple job offers and consulting opportunities."</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <%= image_tag "avatar-2.jpg", alt: "Michael T." %>
-            </div>
-            <div class="testimonial-info">
-              <h4>Michael T.</h4>
-              <p>Senior Marketing Executive</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="testimonial">
-          <div class="testimonial-content">
-            <p>"As a startup founder, being seen as an industry authority was crucial for fundraising. This tool helped me establish credibility with investors in record time."</p>
-          </div>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">
-              <%= image_tag "avatar-3.jpg", alt: "Elena R." %>
-            </div>
-            <div class="testimonial-info">
-              <h4>Elena R.</h4>
-              <p>Tech Entrepreneur</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+
   <section id="pricing" class="pricing">
     <div class="container">
       <h2>Elevate Your Professional Brand</h2>
       <p class="pricing-subtitle">All plans include a 14-day free trial</p>
-      
+
       <div class="pricing-grid">
         <% @plans = [
           { 
@@ -221,7 +137,7 @@
                 <span class="period">/month</span>
               </div>
             </div>
-            
+
             <div class="pricing-features">
               <ul>
                 <% plan[:features].each do |feature| %>
@@ -229,7 +145,7 @@
                 <% end %>
               </ul>
             </div>
-            
+
             <div class="pricing-footer">
               <a href="#" class="btn <%= index == 1 ? 'btn-primary' : 'btn-outline' %>">
                 Start Your Journey
@@ -238,85 +154,25 @@
           </div>
         <% end %>
       </div>
-      
-      <div class="pricing-guarantee">
+
+      <div class="pricing-guarantee" style="text-align: center;">
         <p>30-day money-back guarantee. Cancel anytime.</p>
       </div>
     </div>
   </section>
-  
-  <section id="faq" class="faq">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">
-            <h3>How does this differ from generic content creation tools?</h3>
-            <span class="faq-icon">+</span>
-          </div>
-          <div id="faq1" class="faq-answer collapse">
-            <p>Unlike general content tools, we focus specifically on thought leadership and professional authority building. Our platform analyzes industry news through the lens of your expertise to create content that positions you as an insightful leader with unique perspectives.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">
-            <h3>Can I maintain my authentic voice and perspective?</h3>
-            <span class="faq-icon">+</span>
-          </div>
-          <div id="faq2" class="faq-answer collapse">
-            <p>Absolutely! During onboarding, we analyze your existing content and perspectives to ensure all generated thought leadership maintains your authentic voice. You'll always have final review before publishing to ensure the content aligns with your views.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">
-            <h3>How will this help me get recognized as a thought leader?</h3>
-            <span class="faq-icon">+</span>
-          </div>
-          <div id="faq3" class="faq-answer collapse">
-            <p>Consistent, insightful commentary on industry trends is the foundation of thought leadership. Our platform helps you maintain this consistency while ensuring your content is timely and relevant. Users typically see increased profile views, connection requests, and professional opportunities within 4-8 weeks of consistent publishing.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq4">
-            <h3>How much time will this actually save me?</h3>
-            <span class="faq-icon">+</span>
-          </div>
-          <div id="faq4" class="faq-answer collapse">
-            <p>Most professionals spend 3-5 hours weekly researching industry news and crafting thoughtful posts. Our users report saving over 90% of this time, spending just 10-15 minutes daily reviewing and approving AI-generated thought leadership content.</p>
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq5">
-            <h3>Can I customize the content for different platforms?</h3>
-            <span class="faq-icon">+</span>
-          </div>
-          <div id="faq5" class="faq-answer collapse">
-            <p>Yes, each thought leadership piece is automatically formatted for LinkedIn, Twitter, industry forums, or your company blog. The core insight remains consistent while the presentation is optimized for each platform's unique audience and format requirements.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+
   <section class="cta-section">
     <div class="container">
       <div class="cta-box">
-        <h2>Join the Ranks of Recognized Industry Experts</h2>
-        <p>Transform from participant to authority in your field - in just minutes a day.</p>
-        
+        <h2>Transform from Participant to Authority in Your Field – In Just Minutes a Day</h2>
+        <p style="text-align: center;">No credit card required for trial. 30-day money-back guarantee.</p>
+
         <%= form_with url: subscribe_path, method: :post, class: 'cta-form', data: { turbo: true } do |form| %>
           <div class="input-group">
             <%= form.email_field :email, placeholder: 'Enter your email', class: 'form-control', required: true %>
             <%= form.submit 'Start Your Thought Leadership Journey', class: 'btn btn-primary' %>
           </div>
         <% end %>
-        
-        <p class="cta-guarantee">No credit card required for trial. 30-day money-back guarantee.</p>
       </div>
     </div>
   </section>

@@ -18,7 +18,8 @@ gem "importmap-rails"
 # Turbo for Rails 8
 gem "turbo-rails"
 
-
+# Devise for full user authentication
+gem "devise"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"

@@ -5,7 +5,18 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception
   protect_from_forgery with: :exception
 
-  # For API-only portions of the application if needed
-  # Skip this for HTML form submissions
-  # skip_before_action :verify_authenticity_token, only: [:api_methods_here]
+  # Devise: Redirect to home after logout
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
+  end
+
+  # Devise: Permit extra params like :name (optional)
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name])
+  end
 end

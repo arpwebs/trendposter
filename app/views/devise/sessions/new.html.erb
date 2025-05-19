@@ -1,0 +1,42 @@
+<div class="auth-page">
+  <div class="auth-box">
+    <div class="auth-brand">
+      <%= image_tag "logo.svg", alt: "TrendPost Logo" %>
+    </div>
+    
+    <h2>Welcome Back</h2>
+    <p>Sign in to access your thought leadership dashboard</p>
+
+    <%= form_with model: resource, as: resource_name, url: session_path(resource_name), class: "auth-form", data: { turbo: false } do |f| %>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "your@email.com" %>
+      </div>
+
+      <div class="form-group">
+        <div class="d-flex justify-content-between">
+          <%= f.label :password %>
+          <% if devise_mapping.recoverable? %>
+            <%= link_to "Forgot password?", new_password_path(resource_name), class: "text-sm" %>
+          <% end %>
+        </div>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "••••••••" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="form-group checkbox-group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, class: "mb-0" %>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.submit "Log In", class: "btn btn-primary btn-lg" %>
+      </div>
+    <% end %>
+
+    <div class="auth-links">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

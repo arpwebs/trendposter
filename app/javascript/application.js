@@ -9,7 +9,7 @@ import { initFlashMessages } from "./flash-messages.js";
 import { initFormValidation } from "./form-validation.js";
 
 // Import Turbo
-import * as Turbo from "@hotwired/turbo";
+import "@hotwired/turbo-rails";
 
 // When the DOM is loaded, initialize all interactive elements
 document.addEventListener("DOMContentLoaded", () => {
