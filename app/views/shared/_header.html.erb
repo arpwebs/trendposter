@@ -1,0 +1,15 @@
+<header class="dashboard-header">
+  <h1>Your Dashboard</h1>
+
+  <sl-dropdown>
+    <sl-button slot="trigger" caret>Account</sl-button>
+    <sl-menu>
+      <sl-menu-item>
+        <%= link_to "Account Settings", edit_user_registration_path %>
+      </sl-menu-item>
+      <sl-menu-item>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+      </sl-menu-item>
+    </sl-menu>
+  </sl-dropdown>
+</header>

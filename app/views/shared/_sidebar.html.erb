@@ -1,0 +1,13 @@
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <%= image_tag "logo.svg", alt: "TrendPost", height: 36 %>
+  </div>
+
+  <nav class="sidebar-nav">
+    <%= link_to "Dashboard", dashboard_path, class: "btn btn-outline" %>
+    <%= link_to "Post of the Day", post_of_the_day_path, class: "btn btn-outline" %>
+    <%= link_to "Create New Post", create_post_path, class: "btn btn-outline" %>
+    <%= link_to "Stats", stats_path, class: "btn btn-outline" %>
+    <%= link_to "Preferences", preferences_path, class: "btn btn-outline" %>
+  </nav>
+</aside>

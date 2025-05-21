@@ -16,13 +16,17 @@ Rails.application.routes.draw do
     root to: "dashboard#index", as: :authenticated_root
   end
 
-  # Dashboard route (explicit, for convenience)
+  # Main navigation routes
   get "dashboard", to: "dashboard#index"
+  get "post_of_the_day", to: "posts_of_the_day#show", as: :post_of_the_day
+  get "create_post", to: "posts#new", as: :create_post
+  get "stats", to: "stats#index", as: :stats
+  get "preferences", to: "preferences#show", as: :preferences
 
-  # Preferences (one per user)
+  # Preferences (retain edit/create as needed)
   resource :preference, only: [:show, :edit, :update, :create]
 
-  # AI-generated posts
+  # AI-generated posts (underlying post records)
   resources :posts, only: [:index, :show, :edit, :update, :destroy] do
     member do
       patch :approve

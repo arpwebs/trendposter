@@ -1,0 +1,121 @@
+/* Auth Pages Styling */
+.auth-page {
+  min-height: calc(100vh - 180px); /* Account for nav and footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: $border-radius;
+  box-shadow: $shadow-lg;
+  text-align: center;
+  
+  h2 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  p {
+    color: $gray-600;
+    margin-bottom: 2rem;
+  }
+}
+
+.auth-form {
+  text-align: left;
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: $gray-700;
+    }
+    
+    .form-control {
+      height: 3rem;
+      font-size: 1rem;
+      border: 1px solid $gray-300;
+      
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+      }
+    }
+    
+    .btn {
+      width: 100%;
+      padding: 0.875rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  
+  &::before, &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: $gray-200;
+  }
+  
+  span {
+    padding: 0 1rem;
+    color: $gray-500;
+    font-size: 0.875rem;
+  }
+}
+
+.auth-links {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  
+  a {
+    color: $primary-color;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0.5rem;
+    
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+}
+
+.auth-brand {
+  margin-bottom: 2rem;
+  img {
+    height: 40px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .auth-box {
+    padding: 2rem 1.5rem;
+  }
+}
