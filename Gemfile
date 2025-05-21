@@ -74,3 +74,5 @@ group :production do
   gem "pg", "~> 1.5"
 end
 gem "cssbundling-rails", "~> 1.4"
+
+gem "view_component", "~> 3.21"

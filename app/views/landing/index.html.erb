@@ -1,178 +1,83 @@
 <div class="landing-page">
+  <!-- Hero Section -->
   <header class="hero">
     <div class="container">
       <div class="hero-content hero-content-left">
-        <h1 class="hero-headline">Build Thought Leadership<br>5 Minutes per Day</h1>
-        <h2>Transform industry news into your unique insights – automatically.</h2>
+        <h1 class="hero-headline">10x Your Audience<br>10 Minutes a Day</h1>
+        <h2>Automatically turn trending news into social media posts that grow your reach, influence, and following.</h2>
 
         <div class="cta-primary">
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-          <%= link_to "Log In", new_user_session_path, class: "btn btn-outline btn-lg", style: "margin-left: 1rem;" %>
-          <p class="no-credit-card">No credit card required</p>
+          <%= link_to "Start Growing Your Audience", new_user_registration_path, class: "btn btn-primary btn-lg" %>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- Benefits Section -->
   <section class="benefits" id="benefits">
     <div class="container">
-      <h2>Build Your Following in Minutes a Day</h2>
+      <h2>Grow Your Visibility Without the Grind</h2>
 
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-trending.svg", alt: "Trending icon" %>
+            <!-- Icon placeholder -->
           </div>
-          <h3>Stay Ahead of the Curve</h3>
-          <p>Always be up to date on the latest industry news and trends—without spending hours researching.</p>
+          <h3>Instantly Stay Ahead</h3>
+          <p>Always be in the loop on the latest trends — without spending hours researching.</p>
         </div>
 
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-customize.svg", alt: "Consistency icon" %>
+            <!-- Icon placeholder -->
           </div>
-          <h3>Consistently You</h3>
-          <p>Keep your content aligned with your expertise and interests—no writing required.</p>
+          <h3>Speak in Your Voice</h3>
+          <p>Posts reflect your expertise and tone — no cookie-cutter AI fluff.</p>
         </div>
 
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-ready.svg", alt: "Ready icon" %>
+            <!-- Icon placeholder -->
           </div>
-          <h3>Ready to Share</h3>
-          <p>Get platform-optimized posts that are ready to publish and designed to grow your audience.</p>
+          <h3>Ready to Share. Everywhere.</h3>
+          <p>Get platform-optimized posts for LinkedIn and Twitter with one click.</p>
         </div>
 
         <div class="benefit-card">
           <div class="benefit-icon">
-            <%= image_tag "icon-schedule.svg", alt: "Visibility icon" %>
+            <!-- Icon placeholder -->
           </div>
-          <h3>Show Up More Often</h3>
-          <p>Consistent, frequent posting boosts your visibility and builds trust with your growing audience.</p>
+          <h3>Be Consistently Present</h3>
+          <p>Daily or weekly content keeps you top-of-mind with your audience — effortlessly.</p>
         </div>
       </div>
     </div>
   </section>
 
+
+  <!-- How It Works Section -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
-      <h2>How It Works</h2>
+      <h2>How TrendPost Works for You</h2>
 
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <h3>Define Your Expertise</h3>
-          <p>Select your industry, areas of interest, and the topics that matter to you.</p>
+          <h3>Set Your Focus</h3>
+          <p>Choose the topics and tone that matter to you — business, tech, startups, and more.</p>
         </div>
 
         <div class="step">
           <div class="step-number">2</div>
-          <h3>AI Monitors the Landscape</h3>
-          <p>We continuously scan for relevant breaking news and industry developments.</p>
+          <h3>AI Tracks What Matters</h3>
+          <p>We monitor trending news and extract what’s relevant to your niche.</p>
         </div>
 
         <div class="step">
           <div class="step-number">3</div>
-          <h3>Review and Share</h3>
-          <p>Receive ready-to-post content designed to help you grow your presence and influence.</p>
+          <h3>Get Ready-to-Post Content</h3>
+          <p>Receive curated, personalized content you can post in seconds.</p>
         </div>
-      </div>
-
-      <div class="cta-secondary">
-        <a href="#pricing" class="btn btn-secondary">See Our Plans</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <h2>Elevate Your Professional Brand</h2>
-      <p class="pricing-subtitle">All plans include a 14-day free trial</p>
-
-      <div class="pricing-grid">
-        <% @plans = [
-          { 
-            name: "Emerging Voice", 
-            price: 29, 
-            features: [
-              "Daily industry monitoring",
-              "3 thought leadership posts weekly",
-              "Basic personal branding",
-              "LinkedIn & Twitter optimization",
-              "Email support"
-            ]
-          },
-          {
-            name: "Industry Authority", 
-            price: 79, 
-            features: [
-              "Real-time industry monitoring",
-              "Daily thought leadership content",
-              "Advanced personal branding",
-              "Multi-platform optimization",
-              "Content performance analytics",
-              "Priority support"
-            ]
-          },
-          {
-            name: "Thought Leadership Team", 
-            price: 199, 
-            features: [
-              "Team collaboration features",
-              "Unlimited daily content",
-              "Executive branding strategy",
-              "Custom publishing calendar",
-              "Advanced analytics dashboard",
-              "Dedicated success manager"
-            ]
-          }
-        ] %>
-        <% @plans.each_with_index do |plan, index| %>
-          <div class="pricing-card <%= 'featured' if index == 1 %>">
-            <div class="pricing-header">
-              <h3><%= plan[:name] %></h3>
-              <div class="pricing-price">
-                <span class="currency">$</span>
-                <span class="amount"><%= plan[:price] %></span>
-                <span class="period">/month</span>
-              </div>
-            </div>
-
-            <div class="pricing-features">
-              <ul>
-                <% plan[:features].each do |feature| %>
-                  <li><%= feature %></li>
-                <% end %>
-              </ul>
-            </div>
-
-            <div class="pricing-footer">
-              <a href="#" class="btn <%= index == 1 ? 'btn-primary' : 'btn-outline' %>">
-                Start Your Journey
-              </a>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="pricing-guarantee" style="text-align: center;">
-        <p>30-day money-back guarantee. Cancel anytime.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Transform from Participant to Authority in Your Field – In Just Minutes a Day</h2>
-        <p style="text-align: center;">No credit card required for trial. 30-day money-back guarantee.</p>
-
-        <%= form_with url: subscribe_path, method: :post, class: 'cta-form', data: { turbo: true } do |form| %>
-          <div class="input-group">
-            <%= form.email_field :email, placeholder: 'Enter your email', class: 'form-control', required: true %>
-            <%= form.submit 'Start Your Thought Leadership Journey', class: 'btn btn-primary' %>
-          </div>
-        <% end %>
       </div>
     </div>
   </section>
