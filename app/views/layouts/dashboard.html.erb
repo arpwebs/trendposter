@@ -15,20 +15,26 @@
   <%= javascript_importmap_tags %>
   <%= turbo_include_tags %>
 
-  <!-- Shoelace UI (optional) -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Shoelace UI -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/shoelace.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0/dist/themes/light.css">
+
 </head>
 
 <body class="dashboard-layout">
-  <%= render "shared/sidebar" %>
+  <%= render "shared/header" %>
 
-  <div class="main-area">
-    <%= render "shared/header" %>
+  <div class="dashboard-body">
+    <%= render "shared/sidebar" %>
 
-    <main>
-      <%= yield %>
-    </main>
+    <div class="main-area">
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </div>
 </body>
 </html>

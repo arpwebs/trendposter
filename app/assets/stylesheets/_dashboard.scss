@@ -1,40 +1,139 @@
+@use "base";
+
 .dashboard-layout {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
   font-family: 'Inter', sans-serif;
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    min-height: 56px;
+    border-bottom: 1px solid base.$gray-200;
+    background-color: white;
+    box-shadow: base.$shadow-sm;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      a img {
+        display: block;
+        height: 28px;
+        vertical-align: middle;
+      }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      sl-button::part(base) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+
+      .avatar-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+        color: base.$gray-600;
+        transition: color 0.2s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .account-button:hover .avatar-icon {
+        color: base.$primary-color;
+      }
+    }
+  }
+
+  .dashboard-body {
+    display: flex;
+    height: calc(100vh - 56px);
+  }
 
   .sidebar {
     width: 240px;
-    background-color: $light-color;
+    background-color: base.$light-color;
     padding: 1.5rem;
-    border-right: 1px solid $gray-200;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    border-right: 1px solid base.$gray-200;
     overflow-y: auto;
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: base.$border-radius;
+        text-decoration: none;
+        color: base.$gray-700;
+        font-weight: 500;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        i {
+          font-size: 1.1rem;
+          color: base.$gray-500;
+          transition: color 0.2s ease;
+        }
+
+        &:hover {
+          background-color: base.$gray-100;
+          color: base.$primary-color;
+
+          i {
+            color: base.$primary-color;
+          }
+        }
+
+        &.active {
+          background-color: base.$primary-color;
+          color: white;
+
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+
+      i {
+        font-size: 1.25rem;
+        color: base.$gray-600;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: base.$primary-color;
+        }
+      }
+    }
   }
 
   .main-area {
-    margin-left: 240px;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-
-    .dashboard-header {
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid $gray-200;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    main {
-      flex-grow: 1;
-      overflow-y: auto;
-      padding: 2rem;
-    }
+    overflow-y: auto;
+    padding: 2rem;
   }
 }

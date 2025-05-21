@@ -1,3 +1,5 @@
+@use "base";
+
 /* Auth Pages Styling */
 .auth-page {
   min-height: calc(100vh - 180px); /* Account for nav and footer */
@@ -5,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+  background: linear-gradient(to bottom, base.$light-color, base.$gray-200);
 }
 
 .auth-box {
@@ -13,46 +15,46 @@
   max-width: 480px;
   padding: 2.5rem;
   background-color: white;
-  border-radius: $border-radius;
-  box-shadow: $shadow-lg;
+  border-radius: base.$border-radius;
+  box-shadow: base.$shadow-lg;
   text-align: center;
-  
+
   h2 {
-    color: $primary-color;
+    color: base.$primary-color;
     font-size: 2rem;
     margin-bottom: 0.75rem;
   }
-  
+
   p {
-    color: $gray-600;
+    color: base.$gray-600;
     margin-bottom: 2rem;
   }
 }
 
 .auth-form {
   text-align: left;
-  
+
   .form-group {
     margin-bottom: 1.5rem;
-    
+
     label {
       display: block;
       margin-bottom: 0.5rem;
       font-weight: 500;
-      color: $gray-700;
+      color: base.$gray-700;
     }
-    
+
     .form-control {
       height: 3rem;
       font-size: 1rem;
-      border: 1px solid $gray-300;
-      
+      border: 1px solid base.$gray-300;
+
       &:focus {
-        border-color: $primary-color;
-        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+        border-color: base.$primary-color;
+        box-shadow: 0 0 0 3px rgba(base.$primary-color, 0.1);
       }
     }
-    
+
     .btn {
       width: 100%;
       padding: 0.875rem;
@@ -60,11 +62,11 @@
       margin-top: 1rem;
     }
   }
-  
+
   .checkbox-group {
     display: flex;
     align-items: center;
-    
+
     input[type="checkbox"] {
       margin-right: 0.5rem;
     }
@@ -75,17 +77,18 @@
   display: flex;
   align-items: center;
   margin: 2rem 0;
-  
-  &::before, &::after {
+
+  &::before,
+  &::after {
     content: '';
     flex: 1;
     height: 1px;
-    background-color: $gray-200;
+    background-color: base.$gray-200;
   }
-  
+
   span {
     padding: 0 1rem;
-    color: $gray-500;
+    color: base.$gray-500;
     font-size: 0.875rem;
   }
 }
@@ -93,21 +96,22 @@
 .auth-links {
   margin-top: 2rem;
   font-size: 0.95rem;
-  
+
   a {
-    color: $primary-color;
+    color: base.$primary-color;
     text-decoration: underline;
     display: inline-block;
     margin: 0.5rem;
-    
+
     &:hover {
-      color: $primary-dark;
+      color: base.$primary-dark;
     }
   }
 }
 
 .auth-brand {
   margin-bottom: 2rem;
+
   img {
     height: 40px;
   }

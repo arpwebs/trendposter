@@ -1,13 +1,33 @@
 <aside class="sidebar">
-  <div class="sidebar-logo">
-    <%= image_tag "logo.svg", alt: "TrendPost", height: 36 %>
-  </div>
-
   <nav class="sidebar-nav">
-    <%= link_to "Dashboard", dashboard_path, class: "btn btn-outline" %>
-    <%= link_to "Post of the Day", post_of_the_day_path, class: "btn btn-outline" %>
-    <%= link_to "Create New Post", create_post_path, class: "btn btn-outline" %>
-    <%= link_to "Stats", stats_path, class: "btn btn-outline" %>
-    <%= link_to "Preferences", preferences_path, class: "btn btn-outline" %>
+    <%= link_to dashboard_path, class: current_page?(dashboard_path) ? "active" : "" do %>
+      <i class="fa-solid fa-house"></i>
+      Dashboard
+    <% end %>
+
+    <%= link_to "#", class: "" do %>
+      <i class="fa-solid fa-newspaper"></i>
+      Post of the Day
+    <% end %>
+
+    <%= link_to "#", class: "" do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+      Create New Post
+    <% end %>
+
+    <%= link_to "#", class: "" do %>
+      <i class="fa-solid fa-chart-line"></i>
+      Stats
+    <% end %>
+
+    <%= link_to "#", class: "" do %>
+      <i class="fa-solid fa-gear"></i>
+      Preferences
+    <% end %>
   </nav>
+
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+  </div>
 </aside>

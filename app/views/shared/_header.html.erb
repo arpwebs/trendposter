@@ -1,15 +1,26 @@
 <header class="dashboard-header">
-  <h1>Your Dashboard</h1>
+  <div class="header-left">
+    <%= link_to dashboard_path do %>
+      <%= image_tag "logo.svg", alt: "TrendPost", height: 28 %>
+    <% end %>
+  </div>
 
-  <sl-dropdown>
-    <sl-button slot="trigger" caret>Account</sl-button>
-    <sl-menu>
-      <sl-menu-item>
-        <%= link_to "Account Settings", edit_user_registration_path %>
-      </sl-menu-item>
-      <sl-menu-item>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
-      </sl-menu-item>
-    </sl-menu>
-  </sl-dropdown>
+  <div class="header-right">
+    <sl-dropdown>
+      <sl-button slot="trigger" variant="text" class="account-button" circle>
+        <i class="fa-solid fa-user-circle avatar-icon"></i>
+      </sl-button>
+
+      <sl-menu>
+        <sl-menu-item>
+          <%= link_to "Account Settings", edit_user_registration_path %>
+        </sl-menu-item>
+        <sl-menu-item>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+        </sl-menu-item>
+      </sl-menu>
+    </sl-dropdown>
+
+
+  </div>
 </header>

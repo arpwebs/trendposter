@@ -1,6 +1,8 @@
+@use "base";
+
 /* Executive-style CTA (new) */
 .executive-cta {
-  background: linear-gradient(to right, $primary-dark, $primary-color);
+  background: linear-gradient(to right, base.$primary-dark, base.$primary-color);
   border: none;
   position: relative;
   overflow: hidden;
@@ -29,15 +31,15 @@
   padding: 0.75rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: $gray-700;
+  color: base.$gray-700;
   background-color: #fff;
-  border: 1px solid $gray-300;
-  border-radius: $border-radius;
+  border: 1px solid base.$gray-300;
+  border-radius: base.$border-radius;
   transition: border-color 0.15s ease-in-out;
   
   &:focus {
     outline: none;
-    border-color: $primary-color;
+    border-color: base.$primary-color;
   }
 }
 
@@ -62,7 +64,7 @@
 .flash {
   padding: 1rem;
   margin-bottom: 1rem;
-  border-radius: $border-radius;
+  border-radius: base.$border-radius;
   text-align: center;
   
   &-success {
@@ -85,7 +87,7 @@
   top: 0;
   z-index: 1000;
   background-color: white;
-  box-shadow: $shadow-sm;
+  box-shadow: base.$shadow-sm;
   
   .container {
     display: flex;
@@ -96,7 +98,7 @@
   &-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    color: $primary-color;
+    color: base.$primary-color;
   }
   
   &-links {
@@ -105,11 +107,11 @@
     gap: 1.5rem;
     
     a {
-      color: $gray-600;
+      color: base.$gray-600;
       font-weight: 500;
       
       &:hover {
-        color: $primary-color;
+        color: base.$primary-color;
       }
     }
   }
@@ -129,7 +131,7 @@
     display: block;
     width: 25px;
     height: 3px;
-    background-color: $gray-700;
+    background-color: base.$gray-700;
     margin: 5px 0;
   }
 }
@@ -158,7 +160,7 @@
     margin-bottom: 1.5rem;
     font-weight: 800;
     max-width: 800px;
-    background: linear-gradient(to right, $primary-color, $primary-dark);
+    background: linear-gradient(to right, base.$primary-color, base.$primary-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
@@ -168,14 +170,14 @@
     max-width: 800px;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(to right, $primary-color, $primary-dark);
+    background: linear-gradient(to right, base.$primary-color, base.$primary-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
   h2 {
     font-weight: 400;
-    color: $gray-700;
+    color: base.$gray-700;
     max-width: 550px;
     margin-bottom: 2.5rem;
     font-size: 1.5rem;
@@ -185,8 +187,8 @@
   &-image {
     width: 100%;
     max-width: 1000px;
-    box-shadow: $shadow-lg;
-    border-radius: $border-radius;
+    box-shadow: base.$shadow-lg;
+    border-radius: base.$border-radius;
     overflow: hidden;
     margin-top: 3rem;
   }
@@ -199,14 +201,14 @@
 .no-credit-card {
   margin-top: 1rem;
   font-size: 0.875rem;
-  color: $gray-500;
+  color: base.$gray-500;
 }
 
 /* Thought leadership badge (new) */
 .thought-badge {
   display: inline-block;
-  background-color: rgba($primary-color, 0.1);
-  color: $primary-color;
+  background-color: rgba(base.$primary-color, 0.1);
+  color: base.$primary-color;
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
@@ -229,15 +231,15 @@
 .benefit-card {
   text-align: center;
   padding: 2.5rem 2rem;
-  border-radius: $border-radius;
+  border-radius: base.$border-radius;
   background-color: white;
-  box-shadow: $shadow-sm;
-  border: 1px solid $gray-200;
+  box-shadow: base.$shadow-sm;
+  border: 1px solid base.$gray-200;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: $shadow-lg;
+    box-shadow: base.$shadow-lg;
   }
   
   &-icon {
@@ -247,21 +249,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba($primary-color, 0.1);
+    background-color: rgba(base.$primary-color, 0.1);
     border-radius: 50%;
-    color: $primary-color;
+    color: base.$primary-color;
   }
   
   h3 {
     margin-bottom: 1rem;
-    color: $gray-800;
+    color: base.$gray-800;
     font-weight: 600;
   }
 }
 
 /* How It Works Section */
 .how-it-works {
-  background-color: $gray-100;
+  background-color: base.$gray-100;
 }
 
 .steps {
@@ -278,8 +280,8 @@
   text-align: center;
   padding: 2rem;
   background-color: white;
-  border-radius: $border-radius;
-  box-shadow: $shadow-md;
+  border-radius: base.$border-radius;
+  box-shadow: base.$shadow-md;
   position: relative;
   
   &-number {
@@ -288,7 +290,7 @@
     left: calc(50% - 20px);
     width: 40px;
     height: 40px;
-    background-color: $primary-color;
+    background-color: base.$primary-color;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -318,8 +320,8 @@
     max-width: 900px;
     margin: 0 auto 2rem;
     overflow: hidden;
-    border-radius: $border-radius;
-    box-shadow: $shadow-lg;
+    border-radius: base.$border-radius;
+    box-shadow: base.$shadow-lg;
   }
   
   &-slide {
@@ -339,15 +341,15 @@
   
   &-control {
     padding: 0.5rem 1rem;
-    background-color: $gray-200;
+    background-color: base.$gray-200;
     border: none;
-    border-radius: $border-radius;
+    border-radius: base.$border-radius;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
     
     &.active, &:hover {
-      background-color: $primary-color;
+      background-color: base.$primary-color;
       color: white;
     }
   }
@@ -355,7 +357,7 @@
 
 /* Testimonials Section */
 .testimonials {
-  background-color: $gray-100;
+  background-color: base.$gray-100;
   
   &-grid {
     display: grid;
@@ -367,10 +369,10 @@
 
 .testimonial {
   background-color: white;
-  border-radius: $border-radius;
+  border-radius: base.$border-radius;
   padding: 2.5rem;
-  box-shadow: $shadow-md;
-  border: 1px solid $gray-200;
+  box-shadow: base.$shadow-md;
+  border: 1px solid base.$gray-200;
   transition: transform 0.3s ease;
   
   &:hover {
@@ -385,7 +387,7 @@
     &::before {
       content: '"';
       font-size: 4rem;
-      color: rgba($primary-color, 0.1);
+      color: rgba(base.$primary-color, 0.1);
       position: absolute;
       top: -2rem;
       left: -1rem;
@@ -404,7 +406,7 @@
     border-radius: 50%;
     overflow: hidden;
     margin-right: 1rem;
-    border: 3px solid $gray-200;
+    border: 3px solid base.$gray-200;
   }
   
   &-info {
@@ -415,7 +417,7 @@
     
     p {
       font-size: 0.875rem;
-      color: $primary-color;
+      color: base.$primary-color;
       font-weight: 500;
       margin-bottom: 0;
     }
@@ -429,7 +431,7 @@
   &-subtitle {
     text-align: center;
     margin-bottom: 3rem;
-    color: $gray-600;
+    color: base.$gray-600;
   }
   
   &-grid {
@@ -441,20 +443,20 @@
   
   &-card {
     background-color: white;
-    border-radius: $border-radius;
+    border-radius: base.$border-radius;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid $gray-200;
+    border: 1px solid base.$gray-200;
     
     &:hover {
       transform: translateY(-5px);
-      box-shadow: $shadow-lg;
+      box-shadow: base.$shadow-lg;
     }
     
     &.featured {
       background-color: white;
-      border: 2px solid $primary-color;
-      box-shadow: $shadow-md;
+      border: 2px solid base.$primary-color;
+      box-shadow: base.$shadow-md;
       position: relative;
       
       &::before {
@@ -462,10 +464,10 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-color: $primary-color;
+        background-color: base.$primary-color;
         color: white;
         padding: 0.5rem 1rem;
-        border-bottom-left-radius: $border-radius;
+        border-bottom-left-radius: base.$border-radius;
         font-size: 0.75rem;
         font-weight: 600;
       }
@@ -498,7 +500,7 @@
     }
     
     .period {
-      color: $gray-500;
+      color: base.$gray-500;
       margin-left: 4px;
       align-self: flex-end;
     }
@@ -517,7 +519,7 @@
         width: 20px;
         height: 20px;
         margin-right: 0.5rem;
-        color: $primary-color;
+        color: base.$primary-color;
         font-weight: 700;
       }
     }
@@ -530,14 +532,14 @@
   
   &-guarantee {
     text-align: center;
-    color: $gray-600;
+    color: base.$gray-600;
     font-size: 0.875rem;
   }
 }
 
 /* FAQ Section */
 .faq {
-  background-color: $gray-100;
+  background-color: base.$gray-100;
   
   &-list {
     max-width: 800px;
@@ -546,10 +548,10 @@
   
   &-item {
     background-color: white;
-    border-radius: $border-radius;
+    border-radius: base.$border-radius;
     margin-bottom: 1rem;
     overflow: hidden;
-    box-shadow: $shadow-sm;
+    box-shadow: base.$shadow-sm;
   }
   
   &-question {
@@ -568,7 +570,7 @@
   &-icon {
     font-size: 1.5rem;
     font-weight: 700;
-    color: $primary-color;
+    color: base.$primary-color;
     transition: transform 0.3s ease;
   }
   
@@ -578,14 +580,14 @@
   
   &-answer {
     padding: 0 1.5rem 1.5rem;
-    border-top: 1px solid $gray-200;
+    border-top: 1px solid base.$gray-200;
   }
 }
 
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(to right, $primary-dark, $primary-color);
+  background: linear-gradient(to right, base.$primary-dark, base.$primary-color);
   color: white;
   
   &-box {
@@ -616,7 +618,7 @@
 
 /* Footer */
 .footer {
-  background-color: $gray-900;
+  background-color: base.$gray-900;
   color: white;
   padding: 5rem 0 2rem;
   
@@ -685,7 +687,7 @@
     transition: background-color 0.3s ease;
     
     &:hover {
-      background-color: $primary-color;
+      background-color: base.$primary-color;
     }
   }
 }
@@ -710,7 +712,7 @@
     right: 0;
     background-color: white;
     padding: 1rem;
-    box-shadow: $shadow-md;
+    box-shadow: base.$shadow-md;
   }
   
   .navbar-links {
@@ -808,7 +810,7 @@
     flex-direction: column;
     
     .form-control, .btn {
-      border-radius: $border-radius;
+      border-radius: base.$border-radius;
     }
     
     .btn {

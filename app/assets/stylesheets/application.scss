@@ -1,7 +1,4 @@
-@import "base";         // Reset, variables, typography
-@import "landing";      // Hero, pricing, how-it-works, footer, etc.
-@import "auth";         // Login/Signup forms
-@import "dashboard";    // Sidebar, layout shell, main app styling
-
-// app/assets/stylesheets/application.scss
-
+@use "base";         // Reset, variables, typography
+@use "landing";      // Hero, pricing, how-it-works, footer, etc.
+@use "auth";         // Login/Signup forms
+@use "dashboard";    // Sidebar, layout shell, main app styling
