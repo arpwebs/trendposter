@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "posts/post_of_the_day"
   # Devise routes with clean path names
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
